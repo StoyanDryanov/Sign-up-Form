@@ -1,11 +1,160 @@
 @font-face {
-    font-family: "Norse";
-    src: url(Norse-Bold.otf);
+    font-family: Norse;
+    src: url(fonts/Norse-Bold.otf);
 }
-/* 
-body {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://images.unsplash.com/photo-1605190587727-519a8020dbf6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+
+:root {
+    --dark-green: rgb(89, 109, 72);
+    --red: rgb(210, 110, 110);
+    --blue: rgb(186, 200, 242);
+    --bg-color-main: rgb(249, 250, 251);
+    --bg-color-form: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 1em;
+}
+
+.content {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+.side-image {
+    background-image: url(images/leaves.jpg);
     background-repeat: no-repeat;
-} */
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 35vw;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    height: min(125px, 10em);
+    margin-top: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: Norse, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+}
+
+.photo-creator {
+    color: rgb(255, 255, 255);
+    align-self: center;
+    padding: .5em;
+}
+
+.sign-up-side {
+    width: 65vw;
+    height: 100vh;
+    background-color: var(--bg-color-main);
+}
+
+.introduction {
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 42.5vw;
+    height: calc(20vh + 125px);
+    padding-left: 50px;
+    padding-top: 15vh;
+    overflow-wrap: break-word;
+}
+
+.introduction>p:last-child {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.sign-up-form {
+    background-color: var(--bg-color-form);
+    height: 40vh;
+    box-shadow: 0px 2px 5px#55575a;
+}
+
+.sign-up-form>p:first-child {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 20px 0 20px 50px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-content>div {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    column-gap: 60px;
+}
+
+
+input {
+    display: block;
+    width: 250px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    appearance: none;
+    outline: none !important;
+    border: 1px solid #e5e7eb;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: var(--blue);
+    box-shadow: 0 0 8px var(--blue);
+}
+
+input:invalid {
+    outline: none !important;
+    border: 1px solid var(--red);
+    box-shadow: 0 0 8px var(--red);
+}
+
+.create-account {
+    background-color: var(--dark-green);
+}
+
+.create-account {
+    color: #e5e7eb;
+    font-size: 1.3em;
+    padding: .5rem 2rem;
+    margin: 20px 0 15px 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px gray;
+    border: 1px solid gray;
+}
+
+.create-account+p a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.create-account+p {
+    margin-left: 50px;
+    font-weight: 700;
+}
