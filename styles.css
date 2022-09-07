@@ -9,6 +9,7 @@
     --blue: rgb(186, 200, 242);
     --bg-color-main: rgb(249, 250, 251);
     --bg-color-form: rgb(255, 255, 255);
+    --pixels-from-left: 50px;
 }
 
 * {
@@ -75,7 +76,7 @@ a {
     font-weight: 700;
     width: 42.5vw;
     height: calc(20vh + 125px);
-    padding-left: 50px;
+    margin-left: var(--pixels-from-left);
     padding-top: 15vh;
     overflow-wrap: break-word;
 }
@@ -88,7 +89,7 @@ a {
 .sign-up-form {
     background-color: var(--bg-color-form);
     height: 40vh;
-    box-shadow: 0px 2px 5px#55575a;
+    box-shadow: 0px 2px 5px rgb(163, 163, 163);
 }
 
 .sign-up-form>p:first-child {
@@ -106,7 +107,7 @@ a {
 .form-content>div {
     display: flex;
     flex-direction: row;
-    padding-left: 50px;
+    padding-left: var(--pixels-from-left);
     padding-bottom: 30px;
     column-gap: 60px;
 }
@@ -142,7 +143,7 @@ input:invalid {
     color: #e5e7eb;
     font-size: 1.3em;
     padding: .5rem 2rem;
-    margin: 20px 0 15px 50px;
+    margin: 20px 0 15px var(--pixels-from-left);
     border-radius: 8px;
     box-shadow: 0 0 3px gray;
     border: 1px solid gray;
@@ -155,6 +156,6 @@ input:invalid {
 }
 
 .create-account+p {
-    margin-left: 50px;
+    margin-left: var(--pixels-from-left);
     font-weight: 700;
 }
